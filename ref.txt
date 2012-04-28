@@ -1,0 +1,12 @@
+obstacle http://twistedphysics.typepad.com/cocktail_party_physics/images/2007/05/18/vesta.jpg
+start http://www.windows2universe.org/asteroids/images/asteroid_lutetia_rosetta_july_2010_sm.jpg
+level http://images.nationalgeographic.com/wpf/media-live/photos/000/274/cache/asteroids-could-be-exploded_27451_600x450.jpg
+exit http://www.solstation.com/stars/eros.jpg
+highscore http://www.universetoday.com/wp-content/uploads/2010/02/25143Itokawa-e1267318963787.jpg
+credit http://4.bp.blogspot.com/_Z7hODz8fgEc/TUfper0CYOI/AAAAAAAAARY/m2hxIN70gek/s1600/AsteroidItakawa.jpg
+instruction http://xtec.es/~rmolins1/solar/imatges/idamnclr.jpg
+starwars http://www.jigzone.com/p/up/7/FS/30/5ibl.jpg
+Background Image :http://theinconvenientskeptic.com/wp-content/uploads/2011/05/NASA-The-Andromeda-Galaxy-M31-Spyral-Galaxy-1-Q5VNLFJ7C2-1024x768.jpg 
+FireBall : http://www.webdesign.org/img_articles/10002/sun6.gif
+Next  : http://3.bp.blogspot.com/_fUzorZk31Ss/TUopaZqVmYI/AAAAAAAAIzw/IWK5CRxMDho/s1600/next.gif
+explode : http://4.bp.blogspot.com/_HS-OqmYblqs/TRvDjoQIxHI/AAAAAAAAC00/V2_Mi_IB0Vo/s1600/explode.jpg

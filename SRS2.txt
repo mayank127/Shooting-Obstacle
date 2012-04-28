@@ -1,0 +1,286 @@
+﻿FINAL PROJECT DOCUMENTATION
+
+STAR WARS
+
+CS101:Computer Programming And Utilization Project, 2011
+
+::::::Introduction of Team Members and Teaching Assistant::::::
+
+
+Teaching Assistant : Shashank Rachamalla
+Team:
+	Team 1:
+		 Mayank Meghwanshi
+		 {
+			Roll No:110050012
+			Branch:B.Tech CSE
+			Hours Spent : about 13 hrs 
+		}
+		Mrinal Mishra
+		{
+			Roll No.:110040049
+			Branch: B.Tech Civil
+			Hours Spent:about 12hrs
+		}
+	Team 2:
+		Mohammad Saquib Alam
+		{	
+			Roll No.:110260022
+			Branch: B.Tech Engineering Physics
+			Hours Spent : about 4hrs
+		}
+		
+               Monimoy Bujarbaruah
+		{
+			Roll No.:110010029
+			Branch: B.Tech Aerospace Engineering
+			Hours Spent:about 4hrs
+		}
+	Team 3:
+		Mohammad Anees 
+		{
+			Roll No.:115320002
+			Branch: M. Sc Geo Physics
+			Hours Spent:about 5hrs
+		}
+		Mukesh Chauhan
+		{
+			Roll No.:115280022
+			Bramch: M. Sc. Applied Statistics
+			Hours Spent:about 5hrs
+		}
+		Moradiya Jalpa Ishwarbhai
+		{	
+			Roll No.:115280002
+			Branch: M. Sc. Applied Statistics
+			Hours Spent:about5hrs
+		}
+
+
+
+
+
+
+
+
+
+
+Introduction to Project:
+Name Of Game : Star Wars
+Purpose : CS101 Project
+Sysytem Requirements : Ubuntu ver8.0 or greater
+
+
+For Users: 
+
+
+Programs:
+
+Global Variables:		
+//xclick,yclick mouse click  
+//xcursor,ycursor cursor position
+//xc,yc center of window
+//xg,yg xgf,ygf coordinates of starting and endpoints of gun
+//length distance between cursor position and (xg,yg)
+//xb,yb coordinates of ball
+//xo,yo coordinates of obstcle
+//xw,yw size of window
+//obspos matrix containing x,y coordinates of obstacle
+//ballpos matrix containing position of ball
+//level to decide difficulty level of game
+//ballcount,obstaclecount number of elements in respective matrixes
+//countinstruction counts number of click on instruction window
+
+
+
+
+Standard Libraries Used:
+#include <assert.h>
+#include "ezwin.h"
+#include<cstring>
+#include<cstdio>
+#include<stdlib.h>
+#include<GraphicPosition.h>
+#include<cmath>
+#include"circle.h"
+#include<time.h>
+#include"SimpleWindow.h"
+#include"bitmap.h"
+#include"rect.h"
+#include"ellipse.h"
+#include"Alert.h"
+
+User Defined Libraries:
+
+#include"playgame.h"
+#include"cursor.h"
+#include"ball.h"
+#include"Mousestart.h"
+#include"draw.h"
+#include"obstacle.h"
+#include"collide.h"
+#include"click.h"
+#include"start.h"
+#include"startfunctions.h"
+#include"sort.h"
+#include"clicklevel.h" 
+#inlcude"clickinstruction.h"
+Functions Used:
+
+int APIMain(): In this function we are asking user to enter its name. This function is loading all the images used in the program. At the end of this function we are calling start() function.
+
+void start(): In this function we are creating the Home screen of the game using following functions-
+   RenderText(): displays text
+   SetPosition(): sets the position of images on the screen.
+   Draw(): to draw the object on the screen
+at  the end of the function, it invoke another function mousestart().
+
+int mousestart(): In this function we are executing MouseClick() function which get the postion on screen where the mouse is clicked. At the end we are invoking ball() function and startfunctions ().
+
+void ball(): In this function we are trigering the path of the fired bullet and storing the postion of the ball in a two dimensional aray ballpos[][].
+
+Void Startfunctions(): In this function we are getting on which menu user click on the Home Screen and navigating the user to the appropriate page.
+
+int Collide(): in this function we are manipulating on which menu option user has clicked on the home screen page. This function basically takes into account the collision between fired bullet and the menu image.
+
+void playgame(): In this function we are controling the game activity like collision of ball, movement of gun, firing of bullets and calculating high score. We are saving the top 10 high score in the “HighScore.txt” file.
+
+void Cursor(): This function controls the gun movement by the movement of mouse.
+
+int clicklevel(): This function provide interface and logic to select any level from 1-10.According to this function,increasing level basically means increasing speed of the obstacle & fired bullet.
+
+void draw(): This function is used to draw the obstacles and the bullet at different position while playing the game.
+
+void obstacle(): This function is creating obstacles along different randomly determined path (sin, zig-zag, quadratic, linear). It also storing the obstacle position in a two dimensional array named obstaclepos[][].
+
+
+
+void sort(): This function is checks if new score made by user is greater than any pre existing top 10 score and storing the new scores data in sorted order in the “HighScore.txt” file
+
+ 
+References:
+cursor.h: got from TA.
+Obstacle: http://twistedphysics.typepad.com/cocktail_party_physics/images/2007/05/18/vesta.jpg
+
+start: http://www.windows2universe.org/asteroids/images/asteroid_lutetia_rosetta_july_2010_sm.jpg
+
+level:
+http://images.nationalgeographic.com/wpf/media-live/photos/000/274/cache/asteroids-could-be-exploded_27451_600x450.jpg
+
+exit:
+ http://www.solstation.com/stars/eros.jpg
+
+highscore:
+ http://www.universetoday.com/wp-content/uploads/2010/02/25143Itokawa-e1267318963787.jpg
+
+credit: http://4.bp.blogspot.com/_Z7hODz8fgEc/TUfper0CYOI/AAAAAAAAARY/m2hxIN70gek/s1600/AsteroidItakawa.jpg
+
+instruction: http://xtec.es/~rmolins1/solar/imatges/idamnclr.jpg
+
+starwars:
+http://www.jigzone.com/p/up/7/FS/30/5ibl.jpg
+
+Background Image :
+http://theinconvenientskeptic.com/wp-content/uploads/2011/05/NASA-The-Andromeda-Galaxy-M31-Spyral-Galaxy-1-Q5VNLFJ7C2-1024x768.jpg
+
+FireBall : http://www.webdesign.org/img_articles/10002/sun6.gif
+
+Next  : http://3.bp.blogspot.com/_fUzorZk31Ss/TUopaZqVmYI/AAAAAAAAIzw/IWK5CRxMDho/s1600/next.gif
+
+explode : 
+http://4.bp.blogspot.com/_HS-OqmYblqs/TRvDjoQIxHI/AAAAAAAAC00/V2_Mi_IB0Vo/s1600/explode.jpg
+
+
+Consolidated Project Diary:
+
+4th Oct 2011:  First Team Meet
+9:15 pm-10:45 pm (cs lab osl), First Team Meet. In this meet we discussed about topic of project. Each team memeber provide some ideas on the project and finally we concluded with the project “STAR WARS”. We discussed feasibility of the project and reported TA about the topic.
+
+5th Oct 2011: Second Team Meet
+We had a team meet at 8:30 pm 9:30 pm at H2 lounge. We divided the work in three modules and distributed those among teams: 
+
+Team1:Mayank & Mrinal            -- mouse movement 
+Team2:Saquib & Monimoy         -- collision
+Team3:Anees,Jalpa & Mukesh    -- obstacles
+7th Oct 2011: 
+Team 1: 4 hours : Read about Ezwindows ,uses of mouseclickcallback function.
+
+8th Oct 2011:
+Team 3: 3 hours : Most of the time studied EzWindows and tried to make simple programs using it.
+
+9th Oct 2011:
+Team3: 2 hours  : Reading and looking in sample programs for ideas of motion of ball.
+Team 1: 2 hours : tried making program to give position of mouseclick .
+Team 2 : 3 hours : Studied EzWindows and sample programs.
+
+10th Oct 2011:
+Team 1 : 2 hours : tried to draw the gun and its movement with click.but not successfull in doing so.
+
+12th Oct 2011:
+Team 1 :  3 hours : successfully made the program for motion of gun with click.
+15th Oct 2011:
+Team 3 : 3 hours : made a sample program to draw and erase an object and moving it to different (x,y) coordinates given from user.
+
+16th Oct 2011:
+Team 2 : 3 hours : made a simple program to check collision given centers and radii of objects.
+
+18th Oct 2011:  Third Team Meet
+8:30 to 11:00 2.5 hours  Discussed about project progress. And demoed the sample codes made by teams.
+And Typed srs document for stage1 submission. And asked TA about doubt of cursor movement for which he gave us a program returning position of cursor.
+
+Diwali Vacations 21-29 Oct 2011 : Not much of team work and no significant progress in project making.most of the team members were out of stations.
+
+1st Nov 2011: We had a team meet in lab session from 8:30 to 10:30. Each team member discussed about the progress of the respective modules along with the complete poject progress.and Team 1 collected all the programs from other teams to study them so that they can be combined.
+
+3rd Nov:
+Team 1: 4 hour- Searched for the images needed for the project.and studied programs made by other members.
+Team2: 3 hours: worked on preparing Welcome screen and function used for navigating to different menus.All functioning was done using mouseclick functions.
+
+5th Nov 2011:
+Team 3: 2 hours: worked on completing the movement of obstacles along different path which are generated randomly but couldn't get success in that.
+Team1: 1 hours: Added images to the project.
+
+6th Nov 2011:
+Team 3: 2 hours: worked on path of obstacles and successfully made the path of obstacles and wrote it in an array.
+
+7th Nov 2011:
+Team 1: 4 hours : tried to make different functions run simultaneously,but unsuccessful they were working independently but not simultaneously.
+
+
+8th Nov 2011: 
+Team 1 : 3 hours : used timed events to make a function run for some milli seconds and then other for some. Which gave effect of simultaneity in cursor movement and ball motion. But unsuccessful to add mouse click for shooting of ball.
+And made that automatical shoot after exit of first ball.
+8:30-10:30- We demoed the almost completed project to TA. Each team member run the program and checked the performance. We also discussed for further enhancement.
+Idea of using collision feature on main window came.
+
+
+9th Nov 2011: 
+Team 2 ,Team 1: 2 hours: 
+added collision feature on mainwindow .
+Meeting was scheduled at 5:00 pm but couldn't happen because of un avalibilty of some of team members.
+
+10th Nov 2011: 
+1 hours:Saquib, Mayank, Anees and Mrinal got together to work on click level function and automatic level upgradation while playing game.
+
+11th Nov 2011: 
+5hours: 
+Anees,Mukesh,Mrinal,Saquib(2 hours), and Mayank
+worked on finalising of project documentation,added collision image,and instruction manual to project.
+This Document took 2 hours of this 5 hour duration.
+
+12th Nov 2011:
+2hours: 
+Last team meet submitted hard copy of diaries to TA.and peer review.
+
+Team                      Hours
+Team 1                    29
+Team 2                    18
+Team 3                    19
+
+
+
+
+
+
+
+

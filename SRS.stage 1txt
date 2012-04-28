@@ -1,0 +1,113 @@
+CS101:Computer Programming And Utilization Project, 2011
+
+
+::::::Introduction of Team Members and Teaching Assistant::::::
+
+
+Teaching Assistant : Shashank Rachamalla
+Team:
+	Team 1:
+		 Mayank Meghwanshi
+		 {
+			Roll No:110050012
+			Branch:B.Tech CSE
+			Hours Spent : about 13 hrs 
+		}
+		Mrinal Mishra
+		{
+			Roll No.:110040049
+			Branch: B.Tech Civil
+			Hours Spent:about 12hrs
+		}
+	Team 2:
+		Mohammad Saquib Alam
+		{	
+			Roll No.:110260022
+			Branch: B.Tech Engineering Physics
+			Hours Spent : about 4hrs
+		}
+		Monimoy Bujarbaruah
+		{
+			Roll No.:110010029
+			Branch: B.Tech Aerospace Engineering
+			Hours Spent:about 4hrs
+		}
+	Team 3:
+		Mohammad Anees 
+		{
+			Roll No.:115320002
+			Branch: M. Sc Geo Physics
+			Hours Spent:about 5hrs
+		}
+		Mukesh Chauhan
+		{
+			Roll No.:115280022
+			Bramch: M. Sc. Applied Statistics
+			Hours Spent:about 5hrs
+		}
+		Moradiya Jalpa Ishwarbhai
+		{	
+			Roll No.:115280002
+			Branch: M. Sc. Applied Statistics
+			Hours Spent:about5hrs
+		}
+
+Introduction:
+Name Of Game : Galaxy Wars
+Purpose : CS101 Project
+Sysytem Requirements : Ubuntu ver8.0 or greater
+
+
+Introduction :
+
+In this Game user can control a Gun which shoots Fireballs using mouse movements and shoot fireballs by clicking anywhere on Game window.
+ 
+Softwares Used:
+C++ language compiler
+Ezwindows : A graphics library in c++.
+X11 library : Graphics library in ubuntu 
+
+References:
+Background Image :http://theinconvenientskeptic.com/wp-content/uploads/2011/05/NASA-The-Andromeda-Galaxy-M31-Spyral-Galaxy-1-Q5VNLFJ7C2-1024x768.jpg  (Edited it using Photoshop)
+FireBall : http://www.webdesign.org/img_articles/10002/sun6.gif (edited using Photoshop)
+
+Programming Help:
+Class Notes
+C++ Program Design: Third Edition Resources (Jim Cohoon and Jack Davidson)
+
+System Overview:
+
+Team1:::
+
+Gun Movement : Moving  mouse cursor gives cursor position which causes movement of gun pointer.
+
+
+FireBall Throw : Clicking somewhere returns position of click which in turn stores coordinates of center of ball in array along a straight line and using time difference between drawing and erasing of fireball image gives smooth motion of ball.
+
+
+
+Team 2:::
+
+Collision Mechanism : center of ball and obstacle is used and at every new draw it is checked if their center distance is less than or equal to their sum of radius.If it is than both objects are removed and score is increased.  
+
+
+
+Team 3:::
+
+Obstackle Movement : Using some different mathematical functions value of x and y coordinates are stored in an array which is also simultaneous drawn and erased with ball for smooth motion.
+
+
+Limitations:
+
+Date-18/10/2011
+
+We are still not able to throw multiple ball at same time.
+We still not have worked on more paths of obstacle.
+Collision is still not working as expected.
+
+Expectations Before Sumission:
+
+multiple ball throw simultaneously.
+Scoring function to be completed and highscore management.(introducing file handling in program).
+Also creating some different levels by using different paths of obstacle,speed of ball and time limits of each level.
+
